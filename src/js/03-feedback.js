@@ -32,8 +32,10 @@ form.addEventListener('input', throttle(updateForm, 500));
 form.addEventListener('submit', event => {
     event.preventDefault();
     if (emailInput.value && messageInput.value) {
-        console.log(`email: ${emailInput.value}`);
-        console.log(`message: ${messageInput.value}`);
+
+        const submitStored = {email: emailInput.value, message: messageInput.value}
+    
+        console.log(submitStored)
 
         emailInput.value = '';
         messageInput.value = '';
